@@ -1,0 +1,21 @@
+conversion to number dataType :=
+
+(string)"33" -> (number) 33
+(string)"33abc" -> (number) NaN
+(object) null -> (number) 0
+(boolean) true -> (number) 1
+(undefined) undefined -> (number) NaN
+
+coversion to string datatype :=
+(number) 46 -> (string)"46"
+(object) null -> (string) "null"
+(boolean) true -> (string) "true"
+(undefined) undefined -> (string) "undefined"
+
+conversion to boolean =:
+
+(number) 1-> boolean true
+(string) "" -> boolean false
+(string) "Ram" -> boolean true
+
+
