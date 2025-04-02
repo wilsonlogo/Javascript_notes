@@ -43,3 +43,4 @@ console.log(typeof userEmail) // undefined
 console.log(typeof scoreValue)  //number
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
