@@ -44,3 +44,23 @@ console.log(typeof scoreValue)  //number
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) => copy     Heap (Non primitive) => reference
+
+let val1="Ram Prasad"
+let val2= val1
+val="Arjun Thapar"
+
+console.log(val1)
+console.log(val2)
+
+let obj={
+    Name:"arjun",
+    Email:"user@gamil.com"
+}
+let obj2=obj
+obj2.Email="arjun@gmail.com"
+console.log(obj)
+console.log(obj2)
+
