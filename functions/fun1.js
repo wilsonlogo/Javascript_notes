@@ -39,7 +39,6 @@ function loginUserMessage(username="naruto"){  // default value
     }
     return `${username} just logged in`
 }
-
 console.log(loginUserMessage())
 
 
