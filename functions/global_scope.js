@@ -1,15 +1,15 @@
-//var c = 300
-let a = 300                    // global scope
-if (true) {                       // block scope
-    let a = 10
-    const b = 20                     
-    console.log("INNER: ", a);
+// //var c = 300
+// let a = 300                    // global scope
+// if (true) {                       // block scope
+//     let a = 10
+//     const b = 20                     
+//     console.log("INNER: ", a);
     
-}
-// node scope is different from windows scope
-console.log(a);
-console.log(b);
-console.log(c);
+// }
+// // node scope is different from windows scope
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 
 
@@ -20,38 +20,34 @@ function one(){
         const website = "youtube"
         console.log(username);
     }
-    // console.log(website);
-
-     two()
-
+    two()
+    console.log(website);
 }
+one()
 
-// one()
-
-if (true) {
-    const username = "hitesh"
-    if (username === "hitesh") {
-        const website = " youtube"
-        // console.log(username + website);
-    }
-    // console.log(website);
-}
-
+// if (true) {
+//     const username = "hitesh"
+//     if (username === "hitesh") {
+//         const website = " youtube"
+//         console.log(username + website);
+//     }
+//     // console.log(website);
+// }
 // console.log(username);
 
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))             // function hoisting
+// console.log(addone(5))             // function hoisting
                                        
-function addone(num){
-    return num + 1
-}
+// function addone(num){
+//     return num + 1
+// }
 
 
                                             
-addTwo(5)                             // function expression not hoisted
-const addTwo = function(num){
-    return num + 2
-}
+// addTwo(5)                             // function expression not hoisted
+// const addTwo=function(num){
+//     return num+2
+// }
