@@ -74,3 +74,8 @@ let no_2="Tim"
 no_2=Boolean(no_2)
 console.log(no_2)
 console.log(typeof no_2)
+
+let no_3=undefined
+no_3=Boolean(no_3)
+console.log(no_3)
+console.log(typeof no_3)
