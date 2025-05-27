@@ -50,7 +50,7 @@ console.log(typeof scoreValue)  //number
 
 let val1="Ram Prasad"
 let val2= val1
-val="Arjun Thapar"
+val1="Arjun Thapar"
 
 console.log(val1)
 console.log(val2)
