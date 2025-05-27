@@ -28,18 +28,25 @@ const obj1={
     2:'b'
 }
 const obj2={
-    3:"c",
-    4:"d"
+    3:"b",
+    4:"c"
 }
 const obj3={
-    5:"e",
-    6:"f"
+    5:"c",
+    6:"a"
 }
 // const obj={obj1,obj2,obj3}
 // console.log(obj)
 
-// const obj=Object.assign({},obj1,obj2,obj3)
-// console.log(obj)
+const obj=Object.assign({},obj1,obj2,obj3)   
+console.log(obj)         // this method creates a new empty obj. and then concat.
+console.log(obj==obj1)    // that is why this result in false     
+
+// const new_obj=Object.assign(obj1,obj2,obj3)  
+// console.log(obj1)
+// console.log(new_obj)     // whereas this doesn't creates empty obj. 
+// console.log(new_obj==obj1)  // changes all the obj. and that is why this is true
+
 
 // const newObj={...obj1,...obj2,...obj3}
 // console.log(newObj)
