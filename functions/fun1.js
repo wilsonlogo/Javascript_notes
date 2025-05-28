@@ -1,7 +1,7 @@
 // function saymyName(){
 //     console.log("Naruto Uzumaki")
 // }
-// saymyName()
+// saymyName()   reference and execution
 
 // function sum(num1,num2){
 //     console.log(num1+num2)
