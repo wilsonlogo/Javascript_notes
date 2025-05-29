@@ -25,3 +25,4 @@ for(const keys in map){
     console.log(map[keys])      // not iterable by this method only for of loop will work
 }
 
+// for_in works with keys  and for_of works with values
