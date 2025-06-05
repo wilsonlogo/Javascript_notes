@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <h1>Programming Languages:</h1>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const li=document.createElement('li')
+        li.innerText=`${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+    function add_Opti_lang(lang){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".language").appendChild(li)
+    }
+    add_Opti_lang("C++")
+    add_Opti_lang("Java")
+
+    // Edit
+    const secondEle=document.querySelector('li:nth-child(2)')
+    // secondEle.innerHTML="golang"
+    const textEdit=document.createElement('li')
+    textEdit.textContent="Golang"
+    secondEle.replaceWith(textEdit)
+
+    // 2nd Method
+    const firstEle=document.querySelector('li:first-child')
+    firstEle.outerHTML='<li>Mojo</li>'
+
+</script>
+</html>
