@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // to handle the events we use different methods .These were used in old days : attachEvent() , Jquery-on
+
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl clicked")
+    // } Event listener is used in place of this becoz of many events handling abilities and propagation abilities
+    
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     // console.log(e)
+    //     console.log("owl clicked twice")
+    // },false)
+    // element.addEventListener(type, listener, useCapture)
+    // useCapture  
+    // false (default): use bubbling phase
+    // true: use capturing phase
+
+    // different methods and properties of event object
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // difference between bubbling and capturing phase
+
+    // this is bubbling phase . First "owl clicked will be" printed and then "clicked inside ul" will be printed. down to up
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked")
+    // },false)
+
+
+    // this is capturing phase . First "clicked inside ul" printed and then "owl clicked will be" will be printed. up to down
+    // document.getElementById('image').addEventListener('click',function(e){
+    //     console.log("clicked inside ul")
+    // },true)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked")
+    // },true)
+
+    // to stop the propagation from down to up
+    //document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        // console.log("google clicked")
+    },false)
+
+    document.querySelector("#images").addEventListener('click',function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id)
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+        
+    })
+
+
+
+
+</script>
+</html>
