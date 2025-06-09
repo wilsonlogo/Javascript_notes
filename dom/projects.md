@@ -157,3 +157,32 @@ function newGame() {
   });
 }
 ```
+### Project-5
+```javascript
+const randomColor =function(){
+  const hex="0123456789ABCDEF"
+  let color='#'
+  for(let i=0;i<6;i++){
+    color += hex[Math.floor(Math.random()*16)]
+  }
+  return color
+}
+let timezone = null
+const startColor = function(){
+  const setTime =function(){
+    document.body.style.backgroundColor=randomColor()
+  }
+  if(!timezone){
+    timezone=setInterval(setTime,1700)
+  }
+ 
+}
+const stopColor=function(){
+  clearInterval(timezone)
+  timezone=null
+}
+
+document.querySelector('#start').addEventListener('click',startColor)
+
+document.querySelector('#stop').addEventListener('click',stopColor)
+```
