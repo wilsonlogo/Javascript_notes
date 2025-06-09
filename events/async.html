@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <h1>Asynchronous </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout() use 
+    // setTimeout(function(){
+    //     console.log("Naruto Uzumaki")
+    // },3000)
+
+    const name=function(){
+        console.log("Naruto Uzumaki")
+    }
+    // setTimeout((name),3000)
+    // setInterval(name,3000)
+    const changeTitle=function(){
+        document.querySelector('h1').innerHTML="Learning Javascript"
+    }
+    const change=setTimeout(changeTitle,3000)
+
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(change)
+        console.log("STOPPED")
+    },false)
+    
+
+</script>
+</html>
