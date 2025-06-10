@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #212121; color:#fff">
+    <h1>Learning Javascript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+</body>
+<script>
+
+    // const sayName=function(){
+    //     const time=new Date()
+    //     console.log('Jack Sparrow',time.toLocaleTimeString())
+    // }
+    // setInterval(sayName,2000)
+
+    let timeId=null
+
+    const startTimer = function () {
+        const showTime = function () {
+            const time = new Date()
+            console.log("Jack Sparrow", time.toLocaleTimeString())
+
+        }
+        if(!timeId){
+          timeId=setInterval(showTime, 1000)
+        }
+        
+    }
+    document.querySelector("#start").addEventListener('click', startTimer)
+
+
+    const stopTimer=()=>{
+        clearInterval(timeId);
+        timeId=null;
+    }    
+    document.querySelector("#stop").addEventListener('click',stopTimer)
+
+
+
+</script>
+
+</html>
