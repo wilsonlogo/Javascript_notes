@@ -89,12 +89,12 @@ consumePromise()
 // allUsers()
 
 fetch("https://randomuser.me/api/").
-then((response)=>{
-    return response.json()
-}).
-then((data)=>{
-    console.log("Data :",data)
-}).
-catch((error)=>{
-    console.log(error)
-})
+    then((response) => {
+        return response.json()
+    }).
+    then((data) => {
+        console.log("Data :", data)
+    }).
+    catch((error) => {
+        console.log(error)
+    })
