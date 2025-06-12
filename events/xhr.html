@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+
+<body style="background-color: #212121; color:#fff">
+    <h1 class="api">API Extraction</h1>
+    <p>In XMLHttpRequest, readyState represents the current state of the request. It shows how far along the request is
+        in the process of communicating with the server.</p>
+    <br><br>
+    <pre>
+    Value  State	                Meaning
+    0	   UNSENT	            Request created, but not opened yet (xhr.open() not called)
+    1	   OPENED	            xhr.open() has been called
+    2	   HEADERS_RECEIVED     xhr.send() has been called, and headers have been received
+    3	   LOADING	            Response is being received (browser is downloading the data)
+    4	   DONE	                Request finished — response is fully received
+    </pre>
+    <br>
+    <a href="https://chatgpt.com/share/68474b86-831c-800d-8f7b-f33f91294cee" title="knowledge purpose">Click Here</a>
+
+</body>
+<script>
+   const xhr=new XMLHttpRequest()
+   xhr.open('GET',"https://randomuser.me/api/")
+
+
+   xhr.onreadystatechange=function(){
+    console.log('ReadyState :' , xhr.readyState)
+    if(xhr.readyState===4 && xhr.status===200){
+        let data=JSON.parse(xhr.responseText)
+        console.log("Required Data :",data)
+        let user=data.results[0]
+        console.log("User Name :",user.name.first,user.name.second)
+        console.log("User DOB :",user.dob)
+        console.log("User Gender :",user.gender)
+        console.log("User Profile Pic :",user.picture.large)
+    }
+   }
+   xhr.setRequestHeader("Accept","application/json")
+   xhr.send()
+
+
+</script>
+
+</html>
